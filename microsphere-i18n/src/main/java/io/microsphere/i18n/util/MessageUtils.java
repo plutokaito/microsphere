@@ -82,7 +82,7 @@ public abstract class MessageUtils {
         ServiceMessageSource serviceMessageSource = serviceMessageSource();
         String localizedMessage = serviceMessageSource.getMessage(messageCode, locale, args);
         if (hasText(localizedMessage)) {
-            logger.debug("Message Pattern ['{}'] corresponds to Locale ['{}'] with MessageSage:'{}'", messagePattern, locale, localizedMessage);
+            logger.debug("Message Pattern ['{}'] corresponds to Locale ['{}'] with Message:'{}'", messagePattern, locale, localizedMessage);
         } else {
             int afterDotIndex = messageCode.indexOf(".") + 1;
             if (afterDotIndex > 0 && afterDotIndex < messageCode.length()) {
